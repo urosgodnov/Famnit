@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Uvodno srecanje\n========================================================\nauthor: doc. dr. Uros Godnov\ndate: \nautosize: true\n\nKdo sem\n========================================================\n- rojen 1975\n- 15+ let izkusenj v programiranju, bazah podatkov, BI, data miningu,...\n- Data scientist\n- Delal za Luko Koper, Steklarno Hrastnik, Sveo, Simobil, UKC LJ, Brandstock,...\n- Hobi: bike riding\n\n- Contact: uros.godnov@gmail.com (almost 24/7)\n\n\nKolesi\n========================================================\n\n![alt text](./Slike/bikes.jpg)\n\nZnanja\n========================================================\n\n![alt text](./Slike/Dunning.jpg)\n\nProgram (basic)\n========================================================\n -\tPredstavitev MS SQL streznika in njegovih sestavnih delov (edicije) in najpogostejse napake pri namestitivi\n - \tSeznanitev z Management Studiom in addin-om SSMS tools\n -\tTransact SQL 1: osnovne sestavine, logicni nacin izvajanja (SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER) in osnovni ukazi (SELECT, INSERT, UPDATE, DELETE)\n -\tTransact SQL 2: uporaba naprednejsih moznosti (CTE, JOIN, MERGE, APPLY, PIVOT/UNPIVOT) \n -  Transact SQL 3: uporaba vgrajenih funkcij (window funkcije, datumske funkcije, string funkcije)\n -  Kreiranje objektov v MS SQL serverju 1: kreiranje shem, tabel, indeksov (clustered, non-clustered)\n \n Program (basic)\n========================================================\n -  Kreiranje objektov v MS SQL serverju 2: programabilni objekti (kljuci, procedure, triggerji, funkcije in zacčasne tabele)\n -  Implementacija error handlinga (try-catch) v procedurah\n -  Transakcije in izolacijski nivoji:pregled razlicnih izolacijskih nivojev in njihov vpliv na integriteto podatkov; pregled implicitnih in eksplicitnih transakcij\n -  Nadzorovanje delovanja MS SQL streznika: optimizacija indeksov ter poizvedb\n \n Literatura\n========================================================\n - Exam Ref 70-761 Querying Data with Transact SQL: Itzik Ben Gan\n - Exam Ref 70-762 Developing Sql Databases: Louis Davidson in Stacia Varga\n\n Program (nadaljevalni)\n========================================================\n -  Integration Services\n -  Osnove Rja\n -  R Server\n -  Microsoft open\n -  Integracija Rja in MS SQL streznika\n -  PowerBI\n\n Namestitve\n========================================================\nKaj naj se namesti (najprej namesti prva dva obvezno!):\nVisual studio 2017 communitiy\nhttps://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15#\n \nData tools 2017 for visual studio\nhttps://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt\n \nDeveloperska edicija SQL 2016\nhttps://www.microsoft.com/en-us/sql-server/sql-server-downloads\n \nSSMS (Management studio)\nhttps://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms\n \nR 3.4.2.\nhttps://cran.r-project.org/\n\n Namestitve\n========================================================\n \nMicrosoft R\nhttps://mran.microsoft.com/open/\n \nRstudio desktop\nhttps://www.rstudio.com/products/rstudio/download/\n \nSSMS Toolpack\nhttp://www.ssmstoolspack.com/\n \nPowerBI desktop\nhttps://powerbi.microsoft.com/en-us/desktop/\n \n \n+(Excel)\n\n \n\n",
+    "created" : 1507026545655.000,
+    "dirty" : false,
+    "encoding" : "WINDOWS-1252",
+    "folds" : "",
+    "hash" : "2507978350",
+    "id" : "F7A921E7",
+    "lastKnownWriteTime" : 1507030003,
+    "last_content_update" : 1507030003872,
+    "path" : "C:/Users/Godnov/OneDrive - Univerza na Primorskem Universita' del Litorale/SQL 2016 Famnit/Uvodno.Rpres",
+    "project_path" : "Uvodno.Rpres",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_presentation"
+}
