@@ -643,3 +643,69 @@ IF EXISTS (SELECT * FROM sys.objects
 WHERE object_id = OBJECT_ID(N'[dbo].[demoPerformance]')
 AND type in (N'U'))
 DROP TABLE [dbo].[demoPerformance];
+
+------Transactions
+IF EXISTS (SELECT * FROM sys.objects
+WHERE object_id = OBJECT_ID(N'[dbo].[demoTransaction]')
+AND type in (N'U'))
+DROP TABLE [dbo].[demoTransaction];
+GO
+CREATE TABLE dbo.demoTransaction (col1 INT NOT NULL);
+GO
+--1
+BEGIN TRAN
+INSERT INTO dbo.demoTransaction (col1) VALUES (1);
+INSERT INTO dbo.demoTransaction (col1) VALUES (2);
+COMMIT TRAN
+--2
+BEGIN TRAN
+INSERT INTO dbo.demoTransaction (col1) VALUES (3);
+INSERT INTO dbo.demoTransaction (col1) VALUES ('a');
+COMMIT TRAN
+GO
+--3
+SELECT col1
+FROM dbo.demoTransaction;
+
+IF EXISTS (SELECT * FROM sys.objects
+WHERE object_id = OBJECT_ID(N'[dbo].[demoTransaction]')
+AND type in (N'U'))
+DROP TABLE [dbo].[demoTransaction];
+GO
+CREATE TABLE dbo.demoTransaction (col1 INT NOT NULL);
+GO
+--1
+BEGIN TRAN
+INSERT INTO dbo.demoTransaction (col1) VALUES (1);
+INSERT INTO dbo.demoTransaction (col1) VALUES (2);
+COMMIT TRAN
+--2
+BEGIN TRAN
+INSERT INTO dbo.demoTransaction (col1) VALUES (3);
+INSERT INTO dbo.demoTransaction (col1) VALUES (4);
+ROLLBACK TRAN
+GO
+--3
+SELECT col1
+FROM dbo.demoTransaction;
+
+
+USE AdventureWorks2014;
+GO
+IF EXISTS (SELECT * FROM sys.objects
+WHERE object_id = OBJECT_ID(N'[dbo].[demoTransaction]')
+AND type in (N'U'))
+DROP TABLE [dbo].[demoTransaction];
+GO
+CREATE TABLE dbo.demoTransaction (col1 INT NOT NULL);
+GO
+BEGIN TRAN
+INSERT INTO dbo.demoTransaction (col1) VALUES (1);
+INSERT INTO dbo.demoTransaction (col1) VALUES (2);
+--2. Switch to window 2, and run this code:
+USE AdventureWorks2014;
+GO
+SELECT col1 FROM dbo.demoTransaction;
+--3. At this point, you will see nothing returned from the code from step 2 as it
+--continues to execute. Switch to window 1, and run this code:
+COMMIT TRAN
